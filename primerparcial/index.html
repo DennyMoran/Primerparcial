@@ -13,11 +13,14 @@
 
 <p>La principal diferencia entre Git y cualquier otro VCS (Subversion y compañía incluidos) es cómo Git<br> modela sus datos. Conceptualmente, la mayoría de los demás sistemas almacenan la información como<br> una lista de cambios en los archivos. Estos sistemas (CVS, Subversion, Perforce, Bazaar, etc.) modelan la<br> información que almacenan como un conjunto de archivos y las modificaciones hechas sobre cada uno<br> de ellos a lo largo del tiempo, como ilustra la Figura 1-4.</p>
 
-
+<img src="imagenes/foto1.png" border=0>
 
 <p>Figura 1-4. Otros sistemas tienden a almacenar los datos como cambios de cada archivo respecto a una<br> versión base.</p>
 
 <p>Git no modela ni almacena sus datos de este modo. En cambio, Git modela sus datos más como un<br> conjunto de instantáneas de un mini sistema de archivos. Cada vez que confirmas un cambio, o guardas el<br> estado de tu proyecto en Git, él básicamente hace una foto del aspecto de todos tus archivos en ese<br> momento, y guarda una referencia a esa instantánea. Para ser eficiente, si los archivos no se han<br> modificado, Git no almacena el archivo de nuevo, sólo un enlace al archivo anterior idéntico que ya tiene<br> almacenado. Git modela sus datos más como en la Figura 1-5.</p>
+
+<img src="imagenes/foto2.png" border=0>
+
 
 
 
@@ -54,6 +57,8 @@
 <p>Ahora presta atención. Esto es lo más importante a recordar acerca de Git si quieres que el resto de tu<br> proceso de aprendizaje prosiga sin problemas. Git tiene tres estados principales en los que se pueden<br> encontrar tus archivos: confirmado (committed), modificado (modified), y preparado (staged).<br> Confirmado significa que los datos están almacenados de manera segura en tu base de datos local.<br> Modificado significa que has modificado el archivo pero todavía no lo has confirmado a tu base de datos.<br> Preparado significa que has marcado un archivo modificado en su versión actual para que vaya en tu<br> próxima confirmación.</p>
 
 <p>Esto nos lleva a las tres secciones principales de un proyecto de Git: el directorio de Git (Git directory), el<br> directorio de trabajo (working directory), y el área de preparación (staging area).</p>
+
+<img src="imagenes/foto3.png" border=0>
 
 
 
